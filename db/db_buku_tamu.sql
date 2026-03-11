@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 11 Mar 2026 pada 01.34
+-- Waktu pembuatan: 11 Mar 2026 pada 01.49
 -- Versi server: 8.0.30
 -- Versi PHP: 8.1.10
 
@@ -55,15 +55,16 @@ CREATE TABLE `tamu` (
   `alamat` text,
   `ucapan` text,
   `keterangan` enum('hadir','tidak_hadi','belum_konfirmasi') DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL
+  `email` varchar(100) DEFAULT NULL,
+  `waktu_datang` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `tamu`
 --
 
-INSERT INTO `tamu` (`id_tamu`, `nama_tamu`, `no_hp`, `alamat`, `ucapan`, `keterangan`, `email`) VALUES
-(1, 'Nexdy Experiment', '082125689760', 'cipameungpeuk link lio', 'happy wedding semoga cinta yang kamu bagikan hari ini menjadi keluarga yang bahagia', 'hadir', 'nexdyexperiment1286@gmail.com');
+INSERT INTO `tamu` (`id_tamu`, `nama_tamu`, `no_hp`, `alamat`, `ucapan`, `keterangan`, `email`, `waktu_datang`) VALUES
+(1, 'Nexdy Experiment', '082125689760', 'cipameungpeuk link lio', 'happy wedding semoga cinta yang kamu bagikan hari ini menjadi keluarga yang bahagia', 'hadir', 'nexdyexperiment1286@gmail.com', '00:00:00');
 
 --
 -- Indexes for dumped tables
